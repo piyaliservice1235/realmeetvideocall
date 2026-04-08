@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Piyali's Service</title>
+<title>Piyali's Service - Payment Page</title>
 
 <style>
 body {
@@ -11,15 +11,13 @@ body {
     font-family: Arial;
 }
 
-/* floating hearts */
-body::before {
-    content: "💖 💕 💗 💞 💓 💘 💝";
-    font-size: 20px;
-    display: block;
+/* Floating hearts */
+.hearts {
+    font-size: 22px;
     margin-bottom: 10px;
 }
 
-/* black box */
+/* Black box */
 .box {
     background: black;
     color: white;
@@ -28,31 +26,33 @@ body::before {
     border-radius: 10px;
 }
 
-/* button */
+/* Input */
+input {
+    padding: 10px;
+    margin: 10px;
+    width: 80%;
+}
+
+/* Button */
 button {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
 }
 
-/* red button */
-.redBtn {
+/* Red button */
+.red-btn {
     background: red;
     color: white;
+    border-radius: 5px;
 }
 
-/* glowing done button */
-.doneBtn {
+/* Glow button */
+.glow {
     background: green;
     color: white;
-    box-shadow: 0 0 10px lime;
-}
-
-/* input */
-input {
-    padding: 10px;
-    margin: 10px;
-    width: 80%;
+    border-radius: 5px;
+    box-shadow: 0 0 15px lime;
 }
 </style>
 
@@ -60,12 +60,14 @@ input {
 
 <body>
 
-<h1>Piyali's Service - Real Meet & Video Call 💕</h1>
+<h1>Piyali's Service - Real Meet & Video Call 🎀</h1>
+<div class="hearts">💖 💕 💘 💝 💗 💓</div>
 <h2>Payment Page 💳</h2>
 
 <div class="box">
-নিচে টাকার পরিমাণ লিখে QR কোডটি স্ক্যান করুন। পেমেন্ট করলেই সহজে সার্ভিস বুক হয়ে যাবে।<br>
-नीचे अमाउंट लिखकर QR कोड स्कैन करें। पेमेंट करते ही आपकी सर्विस आसानी से बुक हो जाएगी।
+নিচে টাকার পরিমাণ লিখে QR কোডটি স্ক্যান করুন। পেমেন্ট করলেই সহজে সার্ভিস বুক হয়ে যাবে  
+<br><br>
+नीचे अमाउंट लिखकर QR कोड स्कैन करें। पेमेंट करते ही आपकी सर्विस आसानी से बुक हो जाएगी
 </div>
 
 <h3>Enter Amount 💳</h3>
@@ -73,14 +75,15 @@ input {
 
 <br>
 
-<button class="redBtn" onclick="generateQR()">Generate QR</button>
+<button class="red-btn" onclick="generateQR()">Generate QR</button>
 
 <br><br>
 
 <img id="qrImage" width="200">
 
 <div class="box">
-পরিমাণ লিখতে অসুবিধা হলে নিচের QR কোডগুলো স্ক্যান করেও পেমেন্ট করতে পারেন। 💳📲✨<br>
+পরিমাণ লিখতে অসুবিধা হলে নিচের QR কোডগুলো স্ক্যান করেও পেমেন্ট করতে পারেন। 💳📲✨  
+<br><br>
 अगर अमाउंट लिखने में दिक्कत हो, तो नीचे दिए गए QR कोड्स को स्कैन करके भी पेमेंट कर सकते हैं। 🤳💰✅
 </div>
 
@@ -89,31 +92,30 @@ input {
 
 <br><br>
 
-<h3>আপনার নাম এবং নাম্বার লিখুন 📞</h3>
+<h3>Upload Payment Screenshot 📸</h3>
+<input type="file">
+
+<h3>আপনার নাম এবং নাম্বার লিখুন, যেখানে আপনাকে যোগাযোগ করা যাবে 📞</h3>
 <input type="text" placeholder="Name & Number">
 
 <h3>যে মেয়েটিকে পছন্দ করেছেন তার নাম লিখুন 💕</h3>
 <input type="text" placeholder="Girl Name">
 
-<br>
-
-<h3>Upload Payment Screenshot 📸</h3>
-<input type="file">
-
 <div class="box">
-যে মেয়েটিকে রিয়েল মিটের জন্য পছন্দ করেছেন, এখানে পেমেন্ট করে স্ক্রিনশট আপলোড করলেই সে সঙ্গে সঙ্গে আপনাকে কল করবে 📞 তারপর কথা বলে সরাসরি কবে দেখা করবেন ঠিক করে নিতে পারবেন। ধরুন আপনার ৩ তারিখে সার্ভিস দরকার হলে ১ তারিখেই বুক করতে হবে 📅<br><br>
-
-जिस लड़की को आपने रियल मीट के लिए पसंद किया है, यहाँ पेमेंट करके स्क्रीनशॉट अपलोड करते ही वह आपको तुरंत कॉल करेगी 📞 फिर बात करके आप सीधे तय कर सकते हैं कि कब मिलना है। अगर आपको 3 तारीख को सर्विस चाहिए तो 1 तारीख को बुक करना होगा 📅<br><br>
-
-<b>For Video Call:</b><br>
-जिसे आप बुक करेंगे, वह आपके दिए नंबर या सोशल मीडिया पर तुरंत कॉल करके सर्विस देगा 📞 24 घंटे में रात 3 बजे से सुबह 9 बजे तक सर्विस बंद रहती है 🌙 कॉल के समय अकेले रहने की कोशिश करें और हेडफोन का उपयोग करें 🎧<br><br>
-
-যাকে বুক করবেন, সে আপনার দেওয়া নাম্বার বা সোশ্যাল মিডিয়ায় ইনস্ট্যান্ট কল করে সার্ভিস প্রদান করবে 📞 ২৪ ঘণ্টার মধ্যে রাত ৩টা থেকে সকাল ৯টা পর্যন্ত সার্ভিস বন্ধ থাকে 🌙 কলের সময় একা থাকার চেষ্টা করবেন এবং হেডফোন ব্যবহার করবেন 🎧
+যে মেয়েটিকে রিয়েল মিটের জন্য পছন্দ করেছেন, এখানে পেমেন্ট করে স্ক্রিনশট আপলোড করলেই সে সঙ্গে সঙ্গে আপনাকে কল করবে 📞  
+<br><br>
+जिस लड़की को आपने रियल मीट के लिए पसंद किया है, यहाँ पेमेंट करके स्क्रीनशॉट अपलोड करते ही वह आपको तुरंत कॉल करेगी 📞  
+<br><br>
+For Video Call:  
+<br>
+जिसे आप बुक करेंगे, वह आपके दिए नंबर पर तुरंत कॉल करेगा 📞  
+<br>
+২৪ ঘণ্টার মধ্যে রাত ৩টা থেকে সকাল ৯টা পর্যন্ত সার্ভিস বন্ধ থাকে 🌙  
 </div>
 
 <br>
 
-<button class="doneBtn" onclick="doneMessage()">DONE ✅</button>
+<button class="glow" onclick="doneMessage()">DONE ✅</button>
 
 <script>
 function generateQR() {
@@ -132,7 +134,7 @@ function generateQR() {
 }
 
 function doneMessage() {
-    alert("Thanks for your Payment. We will contact you shortly 💕");
+    alert("Thanks for your Payment, we will contact you shortly 💕");
 }
 </script>
 
