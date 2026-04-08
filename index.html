@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Payment Page</title>
+
+<style>
+body {
+  background-color: pink;
+  font-family: Arial;
+  text-align: center;
+  color: black;
+}
+
+/* Hearts */
+body::after {
+  content: "💖 💕 💘 💞 💓 💗";
+  font-size: 25px;
+  display: block;
+  margin-top: 10px;
+}
+
+/* Black Box */
+.box {
+  background-color: black;
+  color: white;
+  padding: 15px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+/* Input */
+input {
+  padding: 10px;
+  width: 80%;
+  margin: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+/* Button Glow */
+button {
+  padding: 12px 25px;
+  font-size: 18px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px black;
+  }
+  to {
+    box-shadow: 0 0 20px red;
+  }
+}
+</style>
+
+<script>
+function doneMessage() {
+  alert("✅ Payment Submitted Successfully! আমরা খুব শীঘ্রই আপনার সাথে যোগাযোগ করবো 📞✨");
+}
+</script>
+
+</head>
+
+<body>
+
+<h1>Piyali's Service - Real Meet & Video Call</h1>
+<h2>Payment Page</h2>
+
+<div class="box">
+নিচে টাকার পরিমাণ লিখে QR কোডটি স্ক্যান করুন। পেমেন্ট করলেই সহজে সার্ভিস বুক হয়ে যাবে  
+<br>
+नीचे अमाउंट लिखकर QR कोड स्कैन करें। पेमेंट करते ही आपकी सर्विस आसानी से बुक हो जाएगी
+</div>
+
+<h3>Enter Amount 💳</h3>
+<input type="number" placeholder="Enter Amount">
+
+<div class="box">
+পরিমাণ লিখতে অসুবিধা হলে নিচের QR কোডগুলো স্ক্যান করেও পেমেন্ট করতে পারেন। 💳📲✨  
+<br>
+अगर अमाउंट लिखने में दिक्कत हो, तो नीचे दिए गए QR कोड्स को स्कैन करके भी पेमेंट कर सकते हैं।
+</div>
+
+<img src="payment.png" width="200">
+
+<h3>আপনার নাম এবং নাম্বার লিখুন 📞</h3>
+<input type="text" placeholder="Name & Number">
+
+<h3>যে মেয়েটিকে পছন্দ করেছেন তার নাম লিখুন 💕</h3>
+<input type="text" placeholder="Girl Name">
+
+<div class="box">
+যে মেয়েটিকে রিয়েল মিটের জন্য পছন্দ করেছেন, এখানে পেমেন্ট করে স্ক্রিনশট আপলোড করলেই সে সঙ্গে সঙ্গে আপনাকে কল করবে 📞  
+<br>
+फिर बात करके आप तय कर सकते हैं कि कब मिलना है।  
+<br><br>
+**For Video Call:**  
+जिसे आप बुक करेंगे, वह तुरंत कॉल करेगा 📞  
+<br>
+২৪ ঘণ্টার মধ্যে রাত ৩টা থেকে সকাল ৯টা পর্যন্ত সার্ভিস বন্ধ থাকে 🌙  
+</div>
+
+<h3>Upload Payment Screenshot 📸</h3>
+<input type="file">
+
+<br><br>
+
+<button onclick="doneMessage()">DONE ✅</button>
+
+</body>
+</html>
