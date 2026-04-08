@@ -11,13 +11,11 @@ body {
     font-family: Arial;
 }
 
-/* Floating hearts */
 .hearts {
     font-size: 22px;
     margin-bottom: 10px;
 }
 
-/* Black box */
 .box {
     background: black;
     color: white;
@@ -26,28 +24,24 @@ body {
     border-radius: 10px;
 }
 
-/* Input */
 input {
     padding: 10px;
     margin: 10px;
     width: 80%;
 }
 
-/* Button */
 button {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
 }
 
-/* Red button */
 .red-btn {
     background: red;
     color: white;
     border-radius: 5px;
 }
 
-/* Glow button */
 .glow {
     background: green;
     color: white;
@@ -65,9 +59,9 @@ button {
 <h2>Payment Page 💳</h2>
 
 <div class="box">
-নিচে টাকার পরিমাণ লিখে QR কোডটি স্ক্যান করুন। পেমেন্ট করলেই সহজে সার্ভিস বুক হয়ে যাবে  
+নিচে টাকার পরিমাণ লিখে QR কোডটি স্ক্যান করুন।  
 <br><br>
-नीचे अमाउंट लिखकर QR कोड स्कैन करें। पेमेंट करते ही आपकी सर्विस आसानी से बुक हो जाएगी
+नीचे अमाउंट लिखकर QR कोड स्कैन करें।
 </div>
 
 <h3>Enter Amount 💳</h3>
@@ -82,35 +76,27 @@ button {
 <img id="qrImage" width="200">
 
 <div class="box">
-পরিমাণ লিখতে অসুবিধা হলে নিচের QR কোডগুলো স্ক্যান করেও পেমেন্ট করতে পারেন। 💳📲✨  
+পরিমাণ লিখতে অসুবিধা হলে নিচের QR কোড স্ক্যান করুন  
 <br><br>
-अगर अमाउंट लिखने में दिक्कत हो, तो नीचे दिए गए QR कोड्स को स्कैन करके भी पेमेंट कर सकते हैं। 🤳💰✅
+अगर अमाउंट लिखने में दिक्कत हो तो नीचे QR स्कैन करें
 </div>
 
-<!-- Uploaded QR Image -->
+<!-- Uploaded QR -->
 <img src="payment.png" width="200">
 
 <br><br>
 
-<h3>Upload Payment Screenshot 📸</h3>
-<input type="file">
+<h3>Upload Payment Screenshot 📸 (Required)</h3>
+<input type="file" id="screenshot" required>
 
-<h3>আপনার নাম এবং নাম্বার লিখুন, যেখানে আপনাকে যোগাযোগ করা যাবে 📞</h3>
+<h3>আপনার নাম এবং নাম্বার লিখুন 📞</h3>
 <input type="text" placeholder="Name & Number">
 
-<h3>যে মেয়েটিকে পছন্দ করেছেন তার নাম লিখুন 💕</h3>
+<h3>পছন্দের মেয়ের নাম 💕</h3>
 <input type="text" placeholder="Girl Name">
 
 <div class="box">
-যে মেয়েটিকে রিয়েল মিটের জন্য পছন্দ করেছেন, এখানে পেমেন্ট করে স্ক্রিনশট আপলোড করলেই সে সঙ্গে সঙ্গে আপনাকে কল করবে 📞  
-<br><br>
-जिस लड़की को आपने रियल मीट के लिए पसंद किया है, यहाँ पेमेंट करके स्क्रीनशॉट अपलोड करते ही वह आपको तुरंत कॉल करेगी 📞  
-<br><br>
-For Video Call:  
-<br>
-जिसे आप बुक करेंगे, वह आपके दिए नंबर पर तुरंत कॉल करेगा 📞  
-<br>
-২৪ ঘণ্টার মধ্যে রাত ৩টা থেকে সকাল ৯টা পর্যন্ত সার্ভিস বন্ধ থাকে 🌙  
+Payment করে screenshot upload করলেই contact করা হবে 📞
 </div>
 
 <br>
@@ -134,6 +120,13 @@ function generateQR() {
 }
 
 function doneMessage() {
+    var file = document.getElementById("screenshot").files.length;
+
+    if(file === 0) {
+        alert("Please upload payment screenshot first 📸");
+        return;
+    }
+
     alert("Thanks for your Payment, we will contact you shortly 💕");
 }
 </script>
