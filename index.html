@@ -133,7 +133,7 @@ function generateQR() {
         return;
     }
 
-    var upi = "upi://pay?pa=ms.ghosh.3@superyes&pn=Payment&am=" + amount + "&cu=INR";
+   var upi = "upi://pay?pa=ghosh24uservce@naviaxis&pn=Payment&am=" + amount + "&cu=INR";
 
     var qr = "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=" + encodeURIComponent(upi);
 
