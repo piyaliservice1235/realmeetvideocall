@@ -1,128 +1,242 @@
+```html
 <!DOCTYPE html>
-<html>
+<html lang="bn">
 <head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Piyali's Service - Payment Page</title>
-</head>
 
+<title>Piyali's Service - Payment Page</title>
 
 <style>
-body {
-    background: pink;
-    color: #d63384; /* dark pink */
-    text-align: center;
-    font-family: Arial;
-    font-weight: bold; /* সব লেখা bold */
+* {
+    box-sizing: border-box;
 }
 
+body {
+    margin: 0;
+    padding: 22px 12px 35px;
+    background: linear-gradient(145deg, #ffe1ef, #ffb6d5, #ffd9eb);
+    color: #a90052;
+    text-align: center;
+    font-family: Arial, "Noto Sans Bengali", sans-serif;
+    font-weight: bold;
+}
+
+h1 {
+    max-width: 600px;
+    margin: 10px auto 16px;
+    padding: 18px 12px;
+    background: #171017;
+    color: #ff8fc4;
+    border: 2px solid #ff70b7;
+    border-radius: 18px;
+    box-shadow: 0 5px 18px #d6338460;
+    font-size: clamp(23px, 5vw, 32px);
+    line-height: 1.45;
+}
+
+h2 {
+    max-width: 650px;
+    margin: 18px auto;
+    font-size: 18px;
+    line-height: 1.9;
+    color: #790039;
+}
+
+h3 {
+    margin: 22px auto 10px;
+    color: #85003f;
+    font-size: 19px;
+    line-height: 1.7;
+}
 
 .hearts {
-    font-size: 22px;
-    margin-bottom: 10px;
+    margin: 16px auto;
+    color: #d41470;
+    font-size: 27px;
+    letter-spacing: 5px;
+    animation: heartbeat 1.8s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
 }
 
 .box {
-    background: black;
-    color: white;
-    padding: 15px;
-    margin: 15px auto;
-    border-radius: 10px;
-    width: 90%;
+    width: 100%;
     max-width: 500px;
+    margin: 18px auto;
+    padding: 20px 16px;
+    background: #171017;
+    color: #ffd4e8;
+    border: 1px solid #ff77b9;
+    border-radius: 17px;
+    box-shadow: 0 6px 18px #8c00452b;
+    line-height: 1.9;
 }
-
 
 input {
-    padding: 10px;
-    margin: 10px;
-    width: 90%;
+    display: block;
+    width: 100%;
     max-width: 400px;
+    margin: 12px auto;
+    padding: 14px;
+    background: #fffafd;
+    color: #3c1028;
+    border: 2px solid #f28ab9;
+    border-radius: 12px;
+    font-size: 16px;
+    outline: none;
 }
 
+input:focus {
+    border-color: #d41470;
+    box-shadow: 0 0 0 3px #ffb4d5;
+}
+
+input[type="file"] {
+    background: #fff0f7;
+    font-size: 14px;
+}
 
 button {
-    padding: 10px 20px;
+    padding: 13px 24px;
+    margin: 8px 0;
     border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: scale(0.97);
 }
 
 .red-btn {
-    background: red;
+    background: linear-gradient(135deg, #e50055, #a90052);
     color: white;
-    border-radius: 5px;
+    box-shadow: 0 4px 15px #e5005560;
 }
 
 .glow {
-    background: green;
-    color: white;
-    border-radius: 5px;
-    box-shadow: 0 0 15px lime;
+    min-width: 180px;
+    background: linear-gradient(135deg, #24e879, #00a94f);
+    color: #071e10;
+    border: 1px solid #a7ffc8;
+    box-shadow: 0 0 12px #35ff88, 0 0 25px #19ce6b60;
+}
+
+#qrImage {
+    display: block;
+    margin: 16px auto;
+}
+
+img[src="payment.png"] {
+    display: block;
+    margin: 16px auto;
+    max-width: 90%;
+    height: auto;
+}
+
+.footer {
+    margin-top: 25px;
+    color: #8a174b;
+    font-size: 13px;
+    line-height: 1.8;
 }
 </style>
-
 </head>
 
 <body>
 
-<h1>Piyali's Service - Real Meet & Video Call 🎀</h1>
-<div class="hearts">💖 💕 💘 💝 💗 💓</div>
+<h1>Piyali's Service 💗<br>Real Meet & Video Call</h1>
+
+<div class="hearts">♥ 💕 ♡ 💖 ♡ 💕 ♥</div>
+
 <h2>
-পেমেন্ট করলেই আপনি সঙ্গে সঙ্গে দুটি নম্বর পাবেন—একটি হোয়াটসঅ্যাপ এবং একটি আমার কলিং নম্বর। 📲  
+পেমেন্ট সম্পন্ন করার পর যোগাযোগের জন্য প্রয়োজনীয় তথ্য দেওয়া হবে। 📲
 <br><br>
-पेमेंट करते ही आपको तुरंत दो नंबर मिलेंगे—एक व्हाट्सएप और एक मेरा कॉलिंग नंबर। 📞💬✨
+पेमेंट पूरा करने के बाद संपर्क के लिए जरूरी जानकारी दी जाएगी। 📞
 </h2>
 
 <div class="box">
-নিচে টাকার পরিমাণ লিখে QR কোডটি স্ক্যান করুন।  
-<br><br>
-नीचे अमाउंट लिखकर QR कोड स्कैन करें।
+    💗 <strong>Payment Instructions</strong> 💗
+    <br>
+    নিচে টাকার পরিমাণ লিখে Generate QR বাটনে ক্লিক করুন।
+    <br><br>
+    नीचे अमाउंट लिखकर Generate QR बटन पर क्लिक करें।
 </div>
 
-<h3>Enter Amount 💳</h3>
-<input type="number" id="amount" placeholder="Enter Amount">
+<h3>💳 Enter Amount / টাকার পরিমাণ</h3>
 
-<br>
+<input type="number" id="amount" placeholder="Enter Amount (₹)">
 
-<button class="red-btn" onclick="generateQR()">Generate QR</button>
+<button class="red-btn" onclick="generateQR()">
+    💖 Generate QR
+</button>
 
 <br><br>
 
 <img id="qrImage" width="200">
 
 <div class="box">
-পরিমাণ লিখতে অসুবিধা হলে নিচের QR কোড স্ক্যান করুন  
-<br><br>
-अगर अमाउंट लिखने में दिक्कत हो तो नीचे QR स्कैन करें
+    💕 <strong>Alternative Payment QR</strong> 💕
+    <br><br>
+    পরিমাণ লিখতে অসুবিধা হলে নিচের QR কোডটি স্ক্যান করুন।
+    <br><br>
+    अमाउंट लिखने में परेशानी हो तो नीचे दिया गया QR कोड स्कैन करें।
 </div>
 
-<!-- Uploaded QR -->
+<!-- Original payment QR: unchanged -->
 <img src="payment.png" width="200">
 
-<br><br>
+<h3>📸 Upload Payment Screenshot</h3>
 
-<h3>Upload Payment Screenshot 📸 (Required)</h3>
 <input type="file" id="screenshot" required>
 
 <h3>
-আপনার নাম ও নম্বর লিখুন যাতে আমরা যোগাযোগ করতে পারি। 📞  
-সাথে আপনি কী সার্ভিস চান ভিডিও কল না কি রিয়েল মিট, সেটিও জানান। ✨  
+আপনার নাম, ফোন নম্বর ও পছন্দের সার্ভিস লিখুন।
+<br>
+ভিডিও কল নাকি রিয়েল মিট—সেটিও উল্লেখ করুন। 💗
 <br><br>
-संपर्क के लिए अपना नाम और नंबर लिखें। 📞  
-साथ ही बताएं कि आप कौन सी सर्विस चाहते हैं—वीडियो कॉल या रियल मीट। ✨
+अपना नाम, फोन नंबर और पसंदीदा सर्विस लिखें।
+<br>
+वीडियो कॉल या रियल मीट—यह भी बताएं। 💗
 </h3>
 
-<input type="text" placeholder="Name + Number + Service (Video Call / Real Meet)">
+<input
+    type="text"
+    placeholder="Name + Number + Service"
+>
 
-<h3>পছন্দের মেয়ের নাম 💕</h3>
+<h3>💕 পছন্দের মেয়ের নাম / पसंदीदा लड़की का नाम</h3>
+
 <input type="text" placeholder="Girl Name">
 
 <div class="box">
-Payment করে screenshot upload করলেই contact করা হবে 📞
+    💖 Payment করার পর স্ক্রিনশট আপলোড করে DONE বাটনে ক্লিক করুন।
+    <br><br>
+    पेमेंट के बाद स्क्रीनशॉट अपलोड करके DONE बटन पर क्लिक करें। 📲
 </div>
 
-<br>
+<button class="glow" onclick="doneMessage()">
+    💚 DONE ✅
+</button>
 
-<button class="glow" onclick="doneMessage()">DONE ✅</button>
+<div class="hearts">♡ 💗 ♡ 💕 ♡ 💗 ♡</div>
+
+<div class="footer">
+    Made with Love 💖
+    <br>
+    Piyali's Service
+</div>
 
 <script>
 function generateQR() {
@@ -133,7 +247,7 @@ function generateQR() {
         return;
     }
 
-   var upi = "upi://pay?pa=piyalimisti2121@nyes&pn=Payment&am=" + amount + "&cu=INR";
+    var upi = "upi://pay?pa=piyalimisti2121@nyes&pn=Payment&am=" + amount + "&cu=INR";
 
     var qr = "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=" + encodeURIComponent(upi);
 
@@ -154,3 +268,4 @@ function doneMessage() {
 
 </body>
 </html>
+```
